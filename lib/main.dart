@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'question.dart';
 
 void main() => runApp(Quizzler());
 
@@ -27,16 +28,12 @@ class Quizepage extends StatefulWidget {
 class _QuizepageState extends State<Quizepage> {
   List<Icon> scoreKeeper = [];
 
-  List<String> questions = [
-    'Electrons are larger than molecules.',
-    'The Atlantic Ocean is the biggest ocean on Earth.',
-    'The chemical make up food often changes when you cook it.',
-  ];
-
-  List<bool> answers = [
-    false,
-    true,
-    true,
+  List<Question> questionBank = [
+    Question(q: 'Electrons are larger than molecules.', a: false),
+    Question(q: 'The Atlantic Ocean is the biggest ocean on Earth.', a: true),
+    Question(
+        q: 'The chemical make up food often changes when you cook it.',
+        a: true),
   ];
 
   int questionNumber = 0;
@@ -53,7 +50,7 @@ class _QuizepageState extends State<Quizepage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                questions[questionNumber],
+                questionBank[questionNumber].questionText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -77,7 +74,8 @@ class _QuizepageState extends State<Quizepage> {
                 ),
               ),
               onPressed: () {
-                bool correctAnswer = answers[questionNumber];
+                bool correctAnswer =
+                    questionBank[questionNumber].questionAnswer;
 
                 if (correctAnswer == true) {
                   print('user got it right');
@@ -109,7 +107,8 @@ class _QuizepageState extends State<Quizepage> {
                 ),
               ),
               onPressed: () {
-                bool correctAnswer = answers[questionNumber];
+                bool correctAnswer =
+                    questionBank[questionNumber].questionAnswer;
 
                 if (correctAnswer == false) {
                   print('user got it right');
