@@ -25,6 +25,22 @@ class Quizepage extends StatefulWidget {
 }
 
 class _QuizepageState extends State<Quizepage> {
+  List<Icon> scoreKeeper = [];
+
+  List<String> questions = [
+    'Electrons are larger than molecules.',
+    'The Atlantic Ocean is the biggest ocean on Earth.',
+    'The chemical make up food often changes when you cook it.',
+  ];
+
+  List<bool> answers = [
+    false,
+    true,
+    true,
+  ];
+
+  int questionNumber = 0;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +53,7 @@ class _QuizepageState extends State<Quizepage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'This is where the question text will go.',
+                questions[questionNumber],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -61,6 +77,19 @@ class _QuizepageState extends State<Quizepage> {
                 ),
               ),
               onPressed: () {
+                bool correctAnswer = answers[questionNumber];
+
+                if (correctAnswer == true) {
+                  print('user got it right');
+                } else {
+                  print('user got it wrong');
+                }
+
+                setState(() {
+                  questionNumber++;
+                });
+                print(questionNumber);
+
                 //The user picked true.
               },
             ),
@@ -71,7 +100,7 @@ class _QuizepageState extends State<Quizepage> {
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
               textColor: Colors.white,
-              color: Colors.green,
+              color: Colors.red,
               child: Text(
                 'False',
                 style: TextStyle(
@@ -80,12 +109,31 @@ class _QuizepageState extends State<Quizepage> {
                 ),
               ),
               onPressed: () {
+                bool correctAnswer = answers[questionNumber];
+
+                if (correctAnswer == false) {
+                  print('user got it right');
+                } else {
+                  print('user got it wrong');
+                }
+
+                setState(() {
+                  questionNumber++;
+                });
+                print(questionNumber);
+
                 // The user pick flase
               },
             ),
           ),
+        ),
+        Row(
+          children: scoreKeeper,
         )
       ],
     );
   }
 }
+//question1: 'Electrons are larger than molecules.', false,
+//question2: 'The Atlantic Ocean is the biggest ocean on Earth.', true,
+//question3: 'The chemical make up food often changes when you cook it.', true,
