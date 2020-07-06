@@ -26,10 +26,6 @@ class QuizBrain {
     Question('Q15.Herbivores eat meat.', false),
     Question('Q16.Atomic bombs work by atomic fission.', true),
     Question('Q17.Molecules are chemically bonded.', true),
-    Question(' Q18.Spiders have six legs.', false),
-    Question('Q19.Kelvin is a measure of temperature.', true),
-    Question(
-        'Q20.The human skeleton is made up of less than 100 bones.', false),
   ];
 
   void nextQuestion() {

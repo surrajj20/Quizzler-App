@@ -35,18 +35,30 @@ class _QuizepageState extends State<Quizepage> {
     bool correctAnswer = quizBrain.getCorrectAnswer();
 
     setState(() {
-      if (userPickedAnswer == correctAnswer) {
-        scoreKeeper.add(Icon(
-          Icons.check,
-          color: Colors.green,
-        ));
+      if (quizBrain.isFinished() == true) {
+        Alert(
+          context: context,
+          title: 'Finished',
+          desc: 'You\'ve reached the end point of the quiz.',
+        ).show();
+
+        quizBrain.reset();
+
+        scoreKeeper = [];
       } else {
-        scoreKeeper.add(Icon(
-          Icons.close,
-          color: Colors.red,
-        ));
+        if (userPickedAnswer == correctAnswer) {
+          scoreKeeper.add(Icon(
+            Icons.check,
+            color: Colors.green,
+          ));
+        } else {
+          scoreKeeper.add(Icon(
+            Icons.close,
+            color: Colors.red,
+          ));
+        }
+        quizBrain.nextQuestion();
       }
-      quizBrain.nextQuestion();
     });
   }
 
