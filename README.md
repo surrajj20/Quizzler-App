@@ -1,16 +1,19 @@
-# quizzler
+# quizzler❓
 
-A new Flutter application.
+![flutter](https://img.shields.io/badge/Flutter-Framework-green?logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-Language-blue?logo=dart)
+![fork](https://img.shields.io/github/forks/surrajj20/Quizzler-App) 
+![issues](https://img.shields.io/github/issues/surrajj20/Quizzler-App)
+![Stars](https://img.shields.io/github/stars/surrajj20/Quizzler-App)
+![GitHub repo size](https://img.shields.io/github/repo-size/surrajj20/Quizzler-App)
+[![dev](https://img.shields.io/badge/developed%20by%20-suraj%20sah-blue)](https://surrajj20.github.io/Portfolio-of-SURAJ-SAH/)
 
-## Getting Started
+## About:-
+Simple Quiz app where you can get quiz question with true/false options. </br>
+you can see more details in app demo below:-
 
-This project is a starting point for a Flutter application.
+# App Demo:-
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Apk
+[click here to download](https://drive.google.com/file/d/1pzRqTOuP6Mn-Z3KpEt6wM6qB2ipv65lE/view?usp=sharing)
