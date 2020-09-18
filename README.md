@@ -13,6 +13,7 @@ Simple Quiz app where you can get quiz question with true/false options. </br>
 you can see more details in app demo below:-
 
 # App Demo:-
+![App Demo](images/app-demo.gif)
 
 
 ## Apk
